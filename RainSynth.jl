@@ -1,8 +1,8 @@
 #!/usr/bin/env julia
-# ╭──────────────────────────────────────────────────────────────────╮
-# │ RainSynth.jl                                                     │
-# │ Ported and refined from a SciPy reference version                │
-# ╰──────────────────────────────────────────────────────────────────╯
+# ╭─────────────────────────────────────────────────────────────────────╮
+# │ RainSynth.jl                                                        │
+# │ Ported and refined from a SciPy reference version                   │
+# ╰─────────────────────────────────────────────────────────────────────╯
 
 module RainSynth
 
@@ -49,7 +49,7 @@ Constant-power panning of monophonic `signal`.
 The result has two rows (left, right) and `length(signal)` columns.
 """
 function random_pan(signal::AbstractVector{T}) where {T<:Real}
-    θ   = rand() * (π/2)                       # 0 ⇒ left, π/2 ⇒ right
+    θ   = rand() * (π/2)                          # 0 ⇒ left, π/2 ⇒ right
     out = Array{T}(undef, 2, length(signal))
     @inbounds begin
         out[1, :] .=  cos(θ) .* signal

@@ -4,7 +4,7 @@
 # │ Ported and refined from a SciPy reference version                │
 # ╰──────────────────────────────────────────────────────────────────╯
 
-module SynthRain
+module RainSynth
 
 using Random, DSP, WAV
 
@@ -134,10 +134,10 @@ function write_rain(filename::AbstractString;
     return filename
 end
 
-end # module SynthRain
+end # module RainSynth
 
 # ╶───────────────────────────────────────────────────╴ [ main driver ]
 if abspath(PROGRAM_FILE) == @__FILE__
-    fname = SynthRain.write_rain("synthetic_rain.wav"; duration = 30.0)
+    fname = RainSynth.write_rain("synthetic_rain.wav"; duration = 30.0)
     println("File written: ", fname)
 end

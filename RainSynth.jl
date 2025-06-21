@@ -97,7 +97,7 @@ function synth_rain(; duration::Real  = 30.0,
 
     # ╶──────────────────────────────────────────────╴ [ droplet grains ]
 
-    λ         = 120 * intensity                        # drops per second
+    λ         = 100 * intensity                        # drops per second
     n_drops   = Int(round(λ * duration))
     positions = rand(1 : nsamp - 2_000, n_drops)
 

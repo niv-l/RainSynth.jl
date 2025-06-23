@@ -2,4 +2,4 @@
 
 Your 10-hour YouTube rain video is a lie.
 
-It's a loop. *This isn't.*
+It's a loop. This isn't.
